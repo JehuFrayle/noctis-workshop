@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: azure;
+    background: rgb(3, 3, 3);
+    padding: 0 1rem;
+}
+
+// media query for desktop giving padding to the body
+@media (min-width: 1024px) {
+    body {
+        padding: 2rem 10rem;
+    }
+}

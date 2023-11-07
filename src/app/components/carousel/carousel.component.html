@@ -1,0 +1,21 @@
+<div *ngIf="images && images.length > 0" class="container">
+    <img *ngFor="let image of images; let i = index" [src]="image.src" [alt]="image.alt"
+        [ngClass]="{'active': selectedImageIndex === i}">
+
+    <div *ngIf="showIndicators" class="dot-container">
+        <span class="dot" *ngFor="let dot of images; let i = index" [ngClass]="{'active': selectedImageIndex === i}"
+            (click)="selectImage(i)" (keydown.enter)="selectImage(i)" focusable="true" tabindex="0"
+            [attr.aria-label]="'Image'+ (i+1) + 'of' + images.length"></span>
+    </div>
+
+    <div *ngIf="showControls">
+        <button class="prev" (click)="prev()" (keydown.enter)="prev()" focusable="true" tabindex="0"
+            aria-label="Previous Image">
+            <fa-icon [icon]="faChevronLeft"></fa-icon>
+        </button>
+        <button class="next" (click)="next()" (keydown.enter)="next()" focusable="true" tabindex="0"
+            aria-label="Next Image">
+            <fa-icon [icon]="faChevronRight"></fa-icon>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,114 @@
+.hide-mobile {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+
+    nav {
+        display: flex;
+        gap: 2rem;
+        font-size: 2rem;
+
+        a {
+            text-decoration: none;
+            color: #7d8cec;
+
+            &:hover {
+                cursor: pointer;
+
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 0;
+                border: solid 1px #8766ac;
+                transform: scaleX(0);
+                transition: all .2s ease-in-out;
+                transform-origin: left;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        display: flex;
+    }
+}
+
+.show-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    min-height: 50px;
+
+    button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        color: #7d8cec;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 2rem;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        padding: 2.5rem;
+        z-index: 10;
+
+        background-color: #8766ac;
+
+        button {
+            display: block;
+            margin-left: auto;
+            background-color: transparent;
+            border: none;
+            font-size: 2rem;
+            color: #fefefe; 
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            font-size: 2rem;
+            width: 100%;
+            padding: 2rem;
+
+            a {
+                text-decoration: none;
+                color: #fefefe;
+
+                &:hover {
+                    cursor: pointer;
+
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+
+        transform: translateX(-100%);
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}

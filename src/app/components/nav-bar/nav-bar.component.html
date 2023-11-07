@@ -1,0 +1,29 @@
+<div class="hide-mobile">
+    <img src="assets/NoctisLogo.webp" alt="Logo de Noctis" width="50px">
+
+    <nav>
+        <a routerLink="/">Inicio</a>
+        <a routerLink="/">Productos</a>
+        <a routerLink="/">Conocenos</a>
+        <a routerLink="/">Entrar</a>
+    </nav>
+</div>
+
+<div class="show-mobile">
+    <img src="assets/NoctisLogo.webp" alt="Logo de Noctis" width="40px">
+    <button (click)="toggleMobileMenu()" aria-label="Abrir menu">
+        <fa-icon [icon]="faBars"></fa-icon>
+    </button>
+
+    <div [ngClass]="{'active':mobileActive}">
+        <button (click)="toggleMobileMenu()" aria-label="Cerrar menu">
+            <fa-icon [icon]="faClose"></fa-icon>
+        </button>
+        <nav>
+            <a routerLink="/">Inicio</a>
+            <a routerLink="/">Productos</a>
+            <a routerLink="/">Conocenos</a>
+            <a routerLink="/">Entrar</a>
+        </nav>
+    </div>
+</div>

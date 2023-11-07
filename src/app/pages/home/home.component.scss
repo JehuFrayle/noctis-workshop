@@ -1,0 +1,181 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        background: rgb(246, 191, 117);
+        background: linear-gradient(45deg, rgba(246, 191, 117, 1) 0%, rgba(215, 113, 133, 1) 33%, rgba(135, 102, 172, 1) 67%, rgba(65, 80, 177, 1) 100%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    p {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 4rem 0;
+
+        h1 {
+            font-size: 7rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.product-carousel {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        flex-shrink: 1;
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: lighter;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            background: rgb(246, 191, 117);
+            /* Fondo degradado de respaldo para navegadores que no admiten degradados */
+            background: linear-gradient(45deg, rgba(246, 191, 117, 1) 0%, rgba(215, 113, 133, 1) 33%, rgba(135, 102, 172, 1) 67%, rgba(65, 80, 177, 1) 100%);
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+
+        }
+
+        a {
+            position: relative;
+            overflow: hidden;
+            height: 3rem;
+            border-radius: 1.5rem;
+            color: #fff;
+            border: none;
+
+            &:hover::before {
+                transform: scaleX(1);
+            }
+
+            span {
+                position: relative;
+                z-index: 1;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: scaleX(0);
+                transform-origin: 0 50%;
+                width: 100%;
+                height: inherit;
+                border-radius: inherit;
+                background: linear-gradient(82.3deg,
+                        rgba(150, 93, 233, 1) 10.8%,
+                        rgba(99, 88, 238, 1) 94.3%);
+                transition: all 0.475s;
+                background: rgb(246, 191, 117);
+                /* Fondo degradado de respaldo para navegadores que no admiten degradados */
+                background: linear-gradient(45deg, rgba(65, 80, 177, 1) 0%, rgba(135, 102, 172, 1) 33%, rgba(215, 113, 133, 1) 67%, rgba(246, 191, 117, 1) 100%);
+
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        gap: 2rem;
+        padding: 2rem;
+
+        div {
+            width: 30%;
+            text-align: left;
+            align-items: flex-start;
+
+            h2 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+.ilustration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1rem;
+
+    img {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 1/1;
+        background-color: grey;
+        border-radius: 40px;
+    }
+
+    div {
+        width: 30%;
+        text-align: left;
+
+        h2 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+        }
+    }
+}

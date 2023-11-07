@@ -1,0 +1,13 @@
+<section class="header">
+    <h1>NOCTIS WORKSHOP</h1>
+    <p>Dreams that remains...</p>
+</section>
+<section class="product-carousel">
+    <app-carousel [images]="images" (nextSlide)="onNextSlide($event)"></app-carousel>
+    <div>
+        <h2>Conoce nuestro trabajo</h2>
+        <p>Encuentra con nosotros...</p>
+        <p> {{currentService}} </p>
+        <a routerLink="/Products"> <span>Descubre</span></a>
+    </div>
+</section>
