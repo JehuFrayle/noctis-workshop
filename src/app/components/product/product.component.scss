@@ -1,0 +1,86 @@
+article {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(65, 80, 177);
+    background: linear-gradient(0deg, rgba(65, 80, 177, 1) 0%, rgba(215, 113, 133, 1) 100%);
+    background: transparent;
+    border-radius: 1.5rem; // Reminder: this looks bad because of the border-radius of the parent element
+    border-radius: calc(1.5rem + 1rem); // This is the correct way to do it
+    gap: 1rem;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 1.5rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        p {
+            font-size: 1.6rem;
+            padding: 0 1rem;
+            display: block;
+
+            &#Description {
+                display: none;
+                color: #b3b3b3;
+
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+            &#Price {
+                width: 100%;
+                text-align: right;
+                font-size: 2rem;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            justify-content: space-between;
+            width: 100%;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3.5rem;
+                aspect-ratio: 1/1;
+                padding: 1rem;
+                border-radius: 50%;
+                border: none;
+                background: transparent;
+                color: #fefefe;
+                font-size: 2rem;
+                font-weight: bold;
+
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+
+                    color: #f6bf75;
+                }
+            }
+        
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px #fefefe;
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,78 @@
+.filter {
+    background: #dedede;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    width: 200px;
+    z-index: 1;
+    position: absolute;
+    transition: all 200ms ease-in-out;
+    font-size: 1.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    p {
+        margin: 0 auto;
+        width: 100%;
+        color: #030303;
+        font-weight: bold;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        svg {
+            transition: all 200ms ease-in-out;
+            fill: none;
+            stroke: #030303;
+            &.active {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .filter-options {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        flex-wrap: nowrap;
+        margin: .5rem 0;
+        padding: 1rem;
+        max-height: 300px;
+        max-width: 100%;
+        overflow-y: scroll;
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            max-width: 150px;
+            font-weight: bold;
+            font-family: inherit;
+
+            color: #030303;
+            stroke: #030303;
+            text-decoration: none;
+            height: 32px;
+            border-radius: 16px;
+            padding: 4px;
+            padding-left: 0;
+
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                transform: scale(110%);
+                cursor: pointer;
+            }
+        }
+
+        &.active {
+            display: flex;
+        }
+    }
+}

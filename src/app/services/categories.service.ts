@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ServiceResponse } from '../models/content';
+import { CategoryRes } from '../models/categories';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ContentService {
+export class CategoriesService {
 
   constructor(private http:HttpClient) { }
 
@@ -16,7 +16,7 @@ export class ContentService {
     return this.API_ORIGIN;
   }
 
-  getServices(){
-    return this.http.get<ServiceResponse>(this.API+"Services?populate[image][fields][0]=url");
+  getCategories(){
+    return this.http.get<CategoryRes>(this.API+"Categories?populate=*");
   }
 }

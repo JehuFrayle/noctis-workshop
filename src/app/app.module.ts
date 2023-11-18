@@ -9,13 +9,19 @@ import { HomeComponent } from './pages/home/home.component';
 import { provideClientHydration } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProductComponent,
+    ProductsComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

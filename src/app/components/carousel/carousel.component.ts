@@ -18,6 +18,7 @@ export class CarouselComponent implements OnInit {
   @Input() interval = 5000;
   @Input() showControls = true;
   @Input() showIndicators = true;
+  @Input() showGradient = true;
 
   @Output() nextSlide = new EventEmitter<number>();
 

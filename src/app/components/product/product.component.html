@@ -1,0 +1,15 @@
+<article>
+    <img [src]="Product.attributes.Images.data[0].attributes.url"
+        [alt]="Product.attributes.Images.data[0].attributes.alternativeText" width="500px">
+    <div>
+        <p id="Title"> {{Product.attributes.Title}} </p>
+        <p id="Description"> {{Product.attributes.Description}} </p>
+
+        <div>
+            <button aria-label="Add to cart">
+                <fa-icon [icon]="faBagShopping"></fa-icon>
+            </button>
+            <p id="Price"> {{Product.attributes.Price | currency}} </p>
+        </div>
+    </div>
+</article>

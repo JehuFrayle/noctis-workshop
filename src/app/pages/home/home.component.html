@@ -3,11 +3,11 @@
     <p>Dreams that remains...</p>
 </section>
 <section class="product-carousel">
-    <app-carousel [images]="images" (nextSlide)="onNextSlide($event)"></app-carousel>
-    <div>
-        <h2>Conoce nuestro trabajo</h2>
+    <app-carousel [images]="images" (nextSlide)="onNextSlide($event)" [showControls]="false" [showGradient]="true"></app-carousel>
+    <div class="caption">
+        <p>Conoce nuestro trabajo</p>
         <p>Encuentra con nosotros...</p>
-        <p> {{currentService}} </p>
-        <a routerLink="/Products"> <span>Descubre</span></a>
+        <h2> {{currentService}} </h2>
+        <a routerLink="/Productos"> <span>Descubre</span></a>
     </div>
 </section>

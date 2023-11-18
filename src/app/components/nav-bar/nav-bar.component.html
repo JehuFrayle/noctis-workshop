@@ -3,7 +3,7 @@
 
     <nav>
         <a routerLink="/">Inicio</a>
-        <a routerLink="/">Productos</a>
+        <a routerLink="/Productos">Productos</a>
         <a routerLink="/">Conocenos</a>
         <a routerLink="/">Entrar</a>
     </nav>
@@ -20,10 +20,10 @@
             <fa-icon [icon]="faClose"></fa-icon>
         </button>
         <nav>
-            <a routerLink="/">Inicio</a>
-            <a routerLink="/">Productos</a>
-            <a routerLink="/">Conocenos</a>
-            <a routerLink="/">Entrar</a>
+            <a routerLink="/" (click)="toggleMobileMenu()">Inicio</a>
+            <a routerLink="/Productos" (click)="toggleMobileMenu()">Productos</a>
+            <a routerLink="/" (click)="toggleMobileMenu()">Conocenos</a>
+            <a routerLink="/" (click)="toggleMobileMenu()">Entrar</a>
         </nav>
     </div>
 </div>
